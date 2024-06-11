@@ -33,7 +33,7 @@
       "automergeType": "branch"
     },
     {
-      "matchUpdateTypes": ["pin", "digest"],
+      "matchUpdateTypes": ["pin", "digest", "pinDigest"],
       "automerge": true,
       "automergeType": "branch"
     }
