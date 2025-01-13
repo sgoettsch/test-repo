@@ -1,0 +1,20 @@
+{
+  "name": "sgoettsch/test-repo",
+  "description": "",
+  "keywords": [],
+  "authors": [],
+  "require": {
+    "php": ">=8",
+    "ext-curl": "*",
+    "ext-simplexml": "*",
+    "ext-libxml": "*",
+    "ext-json": "*",
+    "ext-imap": "*",
+    "ext-mbstring": "*",
+    "ext-bcmath": "*",
+    "ext-fileinfo": "*"
+  },
+  "scripts": {
+    "code:check": "docker run --rm --mount type=bind,src=%CD%\\\\,target=/app ghcr.io/sgoettsch/docker-phpstan:latest-php8.2 analyse /app"
+  }
+}
