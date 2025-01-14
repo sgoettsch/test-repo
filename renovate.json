@@ -40,8 +40,10 @@
   ],
   "customManagers": [
     {
-      "fileMatch": [
-        "^composer.json$"
+      "description": "Update docker references in composer files",
+      "fileMatch": ["^composer.json$"],
+      "matchStrings": [
+        "\"(?<depName>(?:gcr\\.io|docker\\.io)\\/[^:]+?):(?<currentValue>[^@]+)(?:@(?<currentDigest>sha256:[a-f0-9]+))?\""
       ],
       "datasourceTemplate": "docker",
       "versioningTemplate": "docker"
