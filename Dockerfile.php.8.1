@@ -1,4 +1,4 @@
-FROM php:8.1.30-cli-alpine@sha256:41336c7554cd4aa1f68973244475c71d74b3a599d7c5639a970ca1d1108d2f1d
+FROM php:8.1.31-cli-alpine@sha256:d1e2db2813f240544b309f3f2f6ffea8b5cbd30b37976e5da7a192cf16fd2326
 
 RUN apk update
 RUN apk add git zip libzip-dev
@@ -7,7 +7,7 @@ RUN docker-php-ext-install zip
 
 # Composer
 # renovate: datasource=github-tags depName=composer/composer versioning=semver
-ENV COMPOSER_VERSION="2.8.0"
+ENV COMPOSER_VERSION="2.8.4"
 RUN curl -sfL https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
 RUN chmod +x /usr/bin/composer
 RUN composer self-update --clean-backups ${COMPOSER_VERSION}
